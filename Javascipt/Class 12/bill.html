@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill json</title>
+</head>
+
+<body>
+    <script>
+        let product1 = {
+            id: 101,
+            name: "p1",
+            price: [40, 80, 70],
+            quantity: [20, 6, 10],
+            bill: function () {
+                bill = 0;
+                for (i = 0; i < product1.price.length; i++) {
+                    bill = this.price[i] * this.quantity[i];
+                    console.log(`The bill of Item ${i + 1} is ${bill}.`);
+
+                }
+            },
+            total: function () {
+
+
+                tbill = this.price[0] * this.quantity[0] + this.price[1] * this.quantity[1] + this.price[2] * this.quantity[2];
+                return tbill;
+
+
+            }
+        }
+
+        let product2 = {
+            id: 102,
+            name: "p2",
+            price: [45, 50, 10],
+            quantity: [50, 7, 16],
+            bill: function () {
+                bill = 0;
+                for (i = 0; i < product2.price.length; i++) {
+                    bill = this.price[i] * this.quantity[i];
+                    console.log(`The bill of Item ${i + 1} is ${bill}.`);
+                }
+            },
+            total: function () {
+
+
+                tbill = this.price[0] * this.quantity[0] + this.price[1] * this.quantity[1] + this.price[2] * this.quantity[2];
+                return tbill;
+
+
+            }
+        }
+        let product3 = {
+            id: 103,
+            name: "p3",
+            price: [65, 20, 70],
+            quantity: [20, 6, 13],
+            bill: function () {
+                bill = 0;
+                for (i = 0; i < product3.price.length; i++) {
+                    bill = this.price[i] * this.quantity[i];
+                    console.log(`The bill of Item ${i + 1} is ${bill}.`);
+
+                }
+            },
+            total: function () {
+
+
+                tbill = this.price[0] * this.quantity[0] + this.price[1] * this.quantity[1] + this.price[2] * this.quantity[2];
+                return tbill;
+
+
+            }
+        }
+
+
+
+
+        //data update
+        product1.price.push(40);
+        product1.quantity.push(40);
+        product2.price.push(30);
+        product2.quantity.push(10);
+        product3.price.push(50);
+        product3.quantity.push(30);
+
+
+        //display the data simply
+        
+        console.log(`ID:- ${product1.id}`)
+        console.log(`Name:- ${product1.name}`)
+        console.log(`Price:- ${product1.price}`)
+        console.log(`Quantity:- ${product1.quantity}`)
+        product1.bill();
+        console.log("This is the total of product 1 :- " + product1.total());
+        console.log("---------------")
+        console.log(`ID:- ${product2.id}`)
+        console.log(`Name:- ${product2.name}`)
+        console.log(`Price:- ${product2.price}`)
+        console.log(`Quantity:- ${product2.quantity}`)
+        product2.bill();
+        console.log("This is the total of product 2 :- " + product2.total());
+        console.log("---------------")
+        console.log(`ID:- ${product3.id}`)
+        console.log(`Name:- ${product3.name}`)
+        console.log(`Price:- ${product3.price}`)
+        console.log(`Quantity:- ${product3.quantity}`)
+        product3.bill();
+        console.log("This is the total of product 3 :- " + product3.total());
+        console.log("---------------")
+
+        
+
+        
+
+
+
+
+        let h = [product1.total(), product2.total(), product3.total()];
+
+
+        //Highest value.
+        if (product1.total() > product2.total() && product1.total() > product3.total()) {
+            console.log("Product 1 is the highest selling with the sales of :- " + Math.max(...h))
+        } else if (product2.total() > product1.total() && product2.total() > product3.total()) {
+            console.log("Product 2 is the highest selling with the sales of :- " + Math.max(...h))
+
+        } else {
+            console.log("Product 3 is the highest selling with the sales of :- " + Math.max(...h))
+        }
+
+
+
+        //lowest value
+        if (product1.total() < product2.total() && product1.total() < product3.total()) {
+            console.log("Product 1 is the lowest selling with the sales of :- " + Math.min(...h))
+        } else if (product2.total() < product1.total() && product2.total() < product3.total()) {
+            console.log("Product 2 is the lowest selling with the sales of :- " + Math.min(...h))
+
+        } else {
+            console.log("Product 3 is the lowest selling with the sales of :- " + Math.min(...h))
+        }
+    </script>
+</body>
+
+</html>

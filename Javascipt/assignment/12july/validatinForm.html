@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="name">Name:</label>
+    <input type="text" id="nm"><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age"><br>
+
+    <label for="gender">Gender:</label>
+    <input type="email" id="gender"><br>
+    <span>Male </span><input type="radio" id="male" name="gender"><br>
+    <span>Fe-male</span><input type="radio" id="female" name="gender"><br>
+    <button onclick="sub()">Submit</button>
+    <!-- error message -->
+    <div id="e"></div>
+
+    <script>
+        function sub() {
+
+            if (nm.value.trim() == "") {
+                e.innerText = "*Name Required!";
+            }
+            if (age.value == "") {
+                e.innerText += "*age Required!";
+            }
+            if (!male.checked && !female.checked) {
+                e.innerText += "*gender Required!";
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

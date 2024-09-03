@@ -1,0 +1,48 @@
+body {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    border: 1px solid black;
+    height: 600px;
+    width: 400px;
+background-color: azure;
+
+}
+
+.addExpensive {
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.ShowExpense {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    overflow-y: scroll;
+    height: 200px;
+}
+
+.pendingAmount {
+    border: 1px solid black;
+    height: 70px;
+}
+
+
+
+button {
+    position: relative;
+    left: 30px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    border: 1px dotted red;
+    cursor: pointer;
+    bottom: 20px;
+}

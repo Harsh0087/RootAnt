@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ test</title>
+    <style>
+        body{
+            margin: 0px;
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+        }
+        #container{
+            margin-top:50px ;
+            margin-left:20px ;
+            margin-right:20px ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 50%;
+            /* border: 1px solid black; */
+             border-radius:10px ;
+            background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+        }
+        h2{
+            color: white;
+            margin-top: 50px;
+
+        }
+        ul{
+            margin-top: 50px;
+            color: whitesmoke;
+            cursor: pointer;
+            text-decoration: none;
+            list-style: none;
+            position: relative;
+            right: 40%;
+            padding-right:px;
+        }
+        li{
+            text-decoration: none;
+        }
+        #submitButton{
+            position: relative;
+            background-image: linear-gradient(to left bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+            color: white;
+            cursor: pointer;
+            top:5%;
+            height: 50px;
+            width: 200px;
+            border-radius: 10px;
+            border:none;
+        }
+        #result{
+            position: relative;
+            top: 5%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <h2 id="question"></h2>
+        <ul id="options">j</ul>
+        <button id="submitButton" onclick="submit()">Submit</button>
+        <div id="result" style="display:none;"></div>
+    </div>
+    <script src="mcq.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom </title>
+    <style>
+        .container {
+border: 1px solid black;
+            display: inline-block;
+            width: 400px;
+            height: 500px;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+        .container div{
+            display: inline-block;
+            margin-left:70px;
+        }
+        .add{
+            position: relative;
+            top: 80px;
+            left:170px
+        } 
+        .sub{
+            position: relative;
+            top: 80px;
+            left:170px
+        } 
+        
+    </style>
+</head>
+
+<body>
+    <h1>Shopping</h1>
+<div class="container">
+
+    
+    
+    <div>
+        <h3>Available</h3>
+        <select name="avail" id="avail" multiple >
+            <option value="pen">Pen</option>
+            <option value="ink">Ink</option>
+            <option value="powder">Powder</option>
+            <option value="eraser">Eraser</option>
+        </select>
+    </div>
+    <div>
+        <h3>Purchased</h3>
+        <select name="pur" id="pur" multiple>Purchased</select>
+        <option value="" ></option>
+    </div>
+    <br>
+    <input type="button" value="<" class="sub" onclick="sub_items()">  <br>
+<input type="button" value=">" class="add" onclick="add_items()"> <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <input type="text" id="count"><input type="button" value="Count" class="count"><br>
+   <input type="text" id="bill"> <input type="button" value="Bill" id="bill">
+</div>
+
+
+<script>
+    var list_avail = document.getElementById("avail")
+        var list_pur = document.getElementById("pur")
+        var b = 0;
+
+function add_items(){
+    
+   var new_item=document.createElement("option")
+
+    new_item.text=list_avail.options[list_avail.selectedIndex].text;
+    list_pur.add(new_item);
+
+    count.value=list_pur.length;
+
+    if(new_item.text=="Pen")
+{
+    b=b+10;
+}else if(new_item.text == "Ink"){
+    b=b+20;
+}
+        else if(new_item.text=="Powder"){
+            b=b+30;
+        }
+        else{
+            b=b+40;
+        }
+        document.getElementById("bill").value = b;
+}
+function sub_items(){
+    var new_item2 = document.createElement("option")
+
+    new_item2.text = list_pur.options[list_pur.selectedIndex].text;
+    list_pur.remove(list_pur.selectedIndex);
+
+    count.value = list_pur.length;
+
+    if (new_item2.text == "Pen") {
+        b = b - 10;
+    } else if (new_item2.text == "Ink") {
+        b = b - 20;
+    }
+    else if (new_item2.text == "Powder") {
+        b = b - 30;
+    }
+    else {
+        b = b - 40;
+    }
+    document.getElementById("bill").value = b;
+}
+</script>
+</body>
+
+</html>

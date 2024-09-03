@@ -1,0 +1,19 @@
+.academics{
+    display: flex;
+    justify-content: center;
+}
+body{
+    margin-top: 50px;
+    font-family:"Arial Narrow", "Arial", "sans-serif" ;
+    background-color: blanchedalmond;
+}
+label{
+ position: relative;
+ left: 25px;
+}
+td{
+    border: 1px solid black;
+}
+table{
+    border: 1px solid black;
+}

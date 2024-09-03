@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report card</title>
+</head>
+<body>
+    <div id="record"></div>
+    <script>
+        let x="";
+        var total,percentage;
+        let student1={
+            Name: "Harshpreet",
+            id:101,
+            class:+2,
+            physics:65,
+            chemistry:70,
+            maths:58,
+
+
+            //total can be done like this
+            // get total(){
+            //     return(this.maths+this.chemistry+this.physics);
+            // }
+        }
+
+
+
+            //total can be done like this
+
+        // total1=student1.physics+student1.chemistry+student1.maths;
+        // console.log(total1);
+
+
+
+
+        let student2={
+            Name: "arshvir",
+            id:101,
+            class:+2,
+            physics:60,
+            chemistry:50,
+            maths:78,
+            // get total() {
+            //     return (this.maths + this.chemistry + this.physics);
+            // }
+        }
+        // total2= student2.physics + student2.chemistry + student2.maths,
+        //     console.log(total2);
+        let student_all=[student1,student2];
+        student_all.forEach(record => {
+            console.log(record.Name)
+            console.log(record.id)
+            console.log(record.class)
+
+
+
+            //total can be done like this
+            console.log("totla marks is "+ (record.physics + record.chemistry + record.maths))
+            console.log("totla percentage is "+( ((record.physics + record.chemistry + record.maths)/300)*100)+"%")
+            
+        });
+       
+        </script>
+</body>
+</html>

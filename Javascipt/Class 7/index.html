@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mutliple arrays</title>
+</head>
+<body>
+    
+
+    <script>
+        var a1,a2,a3;
+        a1=[10,20,30,40,50];
+        a2=[1,2,3,4,5];
+        a3=[];
+        var i ,j=a1.length;
+        for(i=0;i<5;i++)
+    {
+        a3[i]=a1[i];
+    }
+
+     for(i=0;i<5;i++)
+     {
+         a3[j++]=a2[i];
+        
+     }
+     for(i=0;i<10;i++)
+    {
+        document.write(a3[i]+"   ");
+    }
+    
+    </script>
+</body>
+</html>

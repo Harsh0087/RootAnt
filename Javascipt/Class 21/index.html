@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Initialization</title>
+</head>
+
+<body>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyCTmpkAI3Iqh9kZOAyZMJHeZubP8vdl9yA",
+            authDomain: "chatproject-1e90d.firebaseapp.com",
+            projectId: "chatproject-1e90d",
+            storageBucket: "chatproject-1e90d.appspot.com",
+            messagingSenderId: "1096227786281",
+            appId: "1:1096227786281:web:9dae98f6d361ee8d571638",
+            measurementId: "G-3DNKTHQB00"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const usersCollection = collection(db, 'users');
+        getDocs(usersCollection).then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                console.log(doc.id, " => ", doc.data());
+            });
+        }).catch((error) => {
+            console.error("Error getting documents: ", error);
+        });
+    </script>
+</body>
+
+</html>

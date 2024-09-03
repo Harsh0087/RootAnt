@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d3d2d2;
+        }
+        .calculator {
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        .display {
+            width: 90%;
+            height: 50px;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 2em;
+            text-align: right;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .buttons input {
+            padding: 20px;
+            font-size: 1.5em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            text-align: center;
+        }
+        .buttons input:active {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h2>Calculator</h2> -->
+    <div class="calculator">
+            <input type="text" id="dis">
+        </div>
+         
+        <div class="num">
+            <input type="button" value="1" id="1" onclick="show('1')" >
+            <input type="button" value="2" id="2" onclick="show('2')">
+            <input type="button" value="3" id="3" onclick="show('3')">
+            <input type="button" value="+" id="+" onclick="show('+')">
+            <input type="button" value="4" id="4" onclick="show('4')">
+            <input type="button" value="5" id="5" onclick="show('5')">
+            <input type="button" value="6" id="6" onclick="show('6')">
+            <input type="button" value="-" id="-" onclick="show('-')">
+            <input type="button" value="7" id="7" onclick="show('7')">
+            <input type="button" value="8" id="8" onclick="show('8')">
+            <input type="button" value="9" id="9" onclick="show('9')">
+            <input type="button" value="" id="" onclick="show('*')">
+            <input type="button" value="C" id="C" onclick="reset()">
+            <input type="button" value="0" id="0" onclick="show('0')">
+            <input type="button" value="/" id="/" onclick="show('/')">
+            <input type="button" value="=" id="=" onclick="result()">
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function show(num){
+        dis.value+=num
+    }
+    function result(){
+        dis.value=eval(dis.value)
+    }
+    function reset(){
+        dis.value=""
+    }
+</script>

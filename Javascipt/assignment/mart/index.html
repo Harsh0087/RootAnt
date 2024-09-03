@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India mart</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            /* height: 100vh;
+            width: 100vw; */
+        }
+
+        .conatiner {
+            display: flex;
+            /* height: 500px;
+            width: 500px; */
+        }
+
+        .box {
+            display: inline-block;
+            border: 1px solid black;
+            height: 200px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="conateiner">
+        <div class="box">
+            <div class="image"></div>
+            <div class="title" id="titles"></div>
+            <div class="price"></div>
+        </div>
+    </div>
+    <script>
+        titles = document.getElementById("titles");
+        price = document.getElementsByClassName("price");
+        container = document.getElementById("conateiner");
+        const product = [{
+            id: 101,
+            image: " https://mountainbounties.com/wp-content/uploads/2017/05/IMG-20240206-WA0026.jpg",
+            title: "soap",
+            price: "5$"
+        }, {
+            id: 102,
+            image: "https://media.istockphoto.com/id/1059543698/photo/pen.jpg?s=612x612&w=0&k=20&c=xydmq5zg2BIGZGcjJfWF6uo-yeJ4mkdRNr4aA4zJ740=",
+            title: "pen",
+            price: "3$"
+        }, {
+            id: 103,
+            image: "https://tiimg.tistatic.com/fp/1/008/325/rectangular-7cm-long-plain-eraser-for-erase-use-756.jpg",
+            title: "eraser",
+            price: "1$"
+        }, {
+            id: 104,
+            image: "https://offimart.com/4519-large_default/wooden-scaleruler-30-cm-12-pack-of-10.jpg",
+            title: "ruler",
+            price: "2$"
+        }
+        ]
+        product.forEach(record => {
+            // console.log(`Title:${record.title}`)
+            let da = document.createElement("div");
+            let bre = document.createElement("br")
+            let imgs = document.createElement("img")
+            img.src=record.image
+            da.classList.add("box")
+            let daimage = document.createTextNode(`${imgs=record.image} `)
+            let datitle = document.createTextNode(`Title: ${record.title} `)
+            let daPrice = document.createTextNode(`Price: ${record.price} `)
+            da.appendChild(daimage)
+            da.appendChild(datitle)
+            da.appendChild(bre)
+            da.appendChild(daPrice)
+
+            container.appendChild(da)
+
+
+
+        })
+    </script>
+</body>
+
+</html>

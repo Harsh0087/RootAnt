@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show / Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header></header>
+    <div class="slider">
+        <div class="slidebox">
+            <button class="btnprev" onclick="plusSlide(-1)">
+                < </button>
+                    <button class="btnnext" onclick="plusSlide(1)">></button>
+                    <div class="myslides">
+                        <img src="1.jpg" alt="">
+                    </div>
+                    <div class="myslides"> 
+            <img src="2.jpg" alt="">
+        </div>
+        <div class="myslides">
+            <img src="3.jpg" alt="">
+        </div>
+        <div class="myslides"> 
+                     <img src="4.jpg" alt=""> 
+                    </div>
+        </div>
+    </div>
+    <div class="activebtn">
+        <span class="dot" onclick="currentImg(1)"></span>
+        <span class="dot" onclick="currentImg(2)"></span>
+        <span class="dot" onclick="currentImg(3)"></span>
+    </div>
+    <script>
+        let slideIndex=1;
+        show(slideIndex);
+        function plusSlide(n){
+            show( slideIndex += n);
+        }
+        function currentImg(n){
+            show(slideIndex = n)
+        }
+        function show(n){
+            let i;
+            let slide =document.getElementsByClassName("myslides")
+            let activeDot= document.getElementsByClassName("dot")
+            if(n>3){
+                slideIndex=1;
+            }
+            if(n<1){
+                slideIndex=slide.length;
+            }
+            for(i=0;i<slide.length;i++){
+                slide[i].style.display="none"
+            }
+            for(i=0;i<3;i++){
+                activeDot[i].className=activeDot[i].className.replace(" active","")
+            }
+            slide[slideIndex-1].style.display = "block";
+            activeDot[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+
+</html>

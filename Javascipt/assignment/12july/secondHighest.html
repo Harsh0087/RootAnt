@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second highest</title>
+</head>
+<body>
+    <script>
+        var a=[20,45,35,95,452,4864,4613];
+        var i,high=20;
+        for(i=0;i<a.length;i++)
+    {
+        if(a[i]>high)
+    {
+        high=a[i];
+    }
+}
+document.write("This is the highest value :- "+high+ "<br>");
+
+
+//find index of the value array.indexOf(var/value);
+ var ind= a.indexOf(high);
+ document.write("This is the index of high :- "+ind +"<br>");
+ 
+
+ var del;
+ del= delete a[ind];
+//  document.write(a)
+secHigh=20;
+     for (i = 0; i < a.length; i++) {
+            if (a[i] > secHigh) {
+                secHigh = a[i];
+            }
+        }
+        document.write("This is the second highest value :- " + secHigh)
+    </script>
+</body>
+</html>

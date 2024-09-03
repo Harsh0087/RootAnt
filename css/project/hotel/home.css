@@ -1,0 +1,39 @@
+body{
+    margin: 0px;
+}
+.navigationBar{
+    /* border: 1px solid black; */
+    height: 40px;
+    width: auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: rgb(39, 27, 27);
+}
+header div h1{
+    position: absolute;
+    color: white;
+    left: 10%;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+}
+nav a:hover{
+    background-color: rgb(161, 129, 118);
+    color: brown;
+}
+.container{
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+}
+.content1{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+}

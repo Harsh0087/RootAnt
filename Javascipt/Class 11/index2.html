@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiple recoerds in json</title>
+</head>
+<body>
+    Multiple recoerds in json. <br>
+    Filter and mapping. <br><br>
+    <div id="record"></div>
+    <script>
+        let students=[
+            {
+                id:101,
+                name:"a",
+                class:"5th",
+                percentage:85
+            },
+            {
+                id:102,
+                name:"b",
+                class:"5th",
+                percentage:65
+            },
+            {
+                id:103,
+                name:"c",
+                class:"5th",
+                percentage:70
+            },
+            {
+                id:104,
+                name:"d",
+                class:"5th",
+                percentage:95
+            },
+            {
+                id:105,
+                name:"e",
+                class:"5th",
+                percentage:90
+            },
+            {
+                id:106,
+                name:"f",
+                class:"5th",
+                percentage:60
+            },
+            {
+                id:107,
+                name:"f",
+                class:"5th",
+                percentage:75
+            }
+        ];
+        let x=students.filter(record=>(
+            record.name == "b"
+        ))
+        let y=students.map(record=>{(record.name+=" singh"),(record.class="6th")});
+        
+        x.forEach(record=>{
+
+            document.write(record.id+" ID <br>");
+            document.write(record.name+" name <br>");
+            document.write(record.class+" class <br>");
+            document.write(record.percentage+" percentage <br>");
+            document.write("<br><br>")
+        }
+            
+        )
+    </script>
+</body>
+</html>

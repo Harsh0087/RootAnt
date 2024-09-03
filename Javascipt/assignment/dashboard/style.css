@@ -1,0 +1,44 @@
+body{
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+header{
+    width: 100%;
+}
+header ul{
+display: flex;
+justify-content: end;
+margin-right:50px ;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style: none;
+    padding-right: 10px;
+}
+li::first-letter{
+color: brown;
+}
+.logindetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 50px;
+    
+}
+legend::first-letter {
+color: brown;
+}
+.firstletter:nth-child(1){
+color: brown;
+}
+#userPass{
+    position: relative;
+    left: 7px;
+}
+.submitbtn:hover{
+    color: brown;
+}

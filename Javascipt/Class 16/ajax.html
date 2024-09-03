@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="data-container"></div>
+    <script>
+        $(document).ready(function () {
+            // AJAX request
+            $.ajax({
+                //  url: 'https://jsonplaceholder.typicode.com/posts', // Dummy API endpoint
+                url: 'https://dummyjson.com/products',
+                // url:'https://dummy-json.mock.beeceptor.com/posts',
+                // url:'http://127.0.0.1:5500/Desktop/Study%20material/templ.json',
+                method: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    // console.log(data.products[0].title);
+
+                    var html = '';
+                    $.each(data.products, function (index, item) {
+                        // Append data to the HTML string
+                        html += '<div>';
+                        html += '<h2>' + item.title + ' ';
+                        html += ' ' + index + '</h2>';
+                        html += '</div>';
+                    });
+                    $('#data-container').html(html);
+                },
+            });
+        });
+    </script>
+</body>
+</html>

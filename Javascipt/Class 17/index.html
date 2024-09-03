@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call back Function</title>
+</head>
+<body>
+    <p id="result">Your answer.</p>
+    <script>
+        function one(cb){
+            cb();
+        }
+        function two(){
+            document.getElementById("result").textContent="hi sir";
+
+        }
+
+        one(two);
+    </script>
+</body>
+</html>

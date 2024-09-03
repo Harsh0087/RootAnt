@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Validation</title>
+</head>
+<style>
+    .fa-eye {
+        cursor: pointer;
+
+    }
+
+    #nmerror {
+        color: red;
+    }
+
+    #errorAge {
+        color: red;
+    }
+</style>
+<script>
+    function convert() {
+        if (pass.type == "password")
+            pass.type = "text";
+        else
+            pass.type = "password";
+    }
+    function show(val) {
+        if (val.trim() == "")
+            nmerror.innerHTML = "sorry";
+
+        else
+            nmerror.innerHTML = "";
+
+    }
+    function showAge(val) {
+        if (val.trim() == "")
+            errorAge.innerHTML = "Error in age";
+        else
+            errorAge.innerHTML = "";
+
+        if (val < 18)
+            errorAge.innerHTML = "Age is less then 18"
+        else
+            errorAge.innerHTML = ""
+    }
+    function passError(val) {
+
+        if (val.length < 5)
+            errorPass.innerHTML = "Password lenght is low"
+        else
+            errorPass.innerHTML = ""
+    }
+</script>
+
+<body>
+    Validation
+    <div> Name <input id="nm" type="text" onblur="show(this.value)">
+        <div id="nmerror"></div>
+    </div>
+    <div> Age <input id="age" type="number" onblur="showAge(this.value)">
+        <div id="errorAge"></div>
+    </div>
+    <div> Password <input id="pass" type="password" onblur="passError(this.value)">
+        <span class="password-toggle-icon"><i onclick="convert()" class="fas fa-eye"></i></span>
+        <div id="errorPass"></div>
+    </div>
+    <div> <input type="button" value="Submit"> </div>
+
+</body>
+
+</html>

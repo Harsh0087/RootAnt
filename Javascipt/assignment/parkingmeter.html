@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking meter</title>
+</head>
+<body>
+    <form action="">
+
+        <div>
+            Parking
+            <div id="entryTime">InTime <input id="h1" type="text"> <input id="m1" type="text"></div>
+            <div id="outTime">OutTime<input id="h2" type="text"><input id="m2" type="text"></div>
+            <div id="totalTime">total <input id="h3" type="text"></div>
+            <div id="totalBill">bill <input id="b1" type="text"></div>
+            <div><input id="okButton" onclick="show()" type="button" value="ok">
+                <input id="resetButton" type="reset">
+            </div>
+        </div>
+    </form>
+    <script>
+        // script ka sara kam ek main button ke function me hoga jesse ki show().
+        function show() {
+            var x = h2.value - h1.value;
+            var y = m2.value - m1.value;
+            if (y < 0) {
+                y = y + 60;
+                x = x - 1;
+            }
+            // This will show the total time in the parking.
+            z = x + ":" + y;
+            h3.value = z;
+            // This is how the total bill will be calculated.
+            timeInMin = (x * 60) + y;
+            b1.value = timeInMin * (2 / 5) + "rs";
+        }
+    
+    </script>
+</body>
+
+</html>

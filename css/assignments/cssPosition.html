@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS positions</title>
+</head>
+<style>
+    /* p {
+        border: 2px solid black;
+    }
+    .div2{
+        border: 3px solid red;
+        background-color: orange;
+    }
+    .abs1{
+        position: absolute;
+        top: 40px;
+        left: 60px;
+        background-color: greenyellow;
+    }
+    .abs2{
+        position: absolute;
+        top: 40px;
+        left: 60px;
+        background-color: greenyellow;
+    }
+     */
+    body>div {
+        border: 1px solid red;
+        padding: 10px;
+    }
+
+    .one {
+        background-color: rgb(84, 73, 231);
+        position: absolute;
+        top: 70px;
+        height: 100px;
+        width: 100px;
+        border-radius: 20px;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .two {
+        background-color: greenyellow;
+        position: relative;
+        bottom: 0px;
+        height: 100px;
+        width: 100px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .three {
+        background-color: brown;
+        position: static;
+        height: 100px;
+        width: 100px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .four {
+        background-color: purple;
+        position: static;
+        margin-top: 20px;
+        height: 100px;
+        width: 100px;
+        border-radius: 20px;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <!-- <p>This is a normal paragraph.</p>
+        <p>This is a normal paragraph.</p>
+        <p class="abs1">This is a absolutly positioned paragraph at 40px top and 60px left.</p>
+        <div class="div2">
+            <p>This paragraph is inside the div element.</p>
+            <p>This paragraph is inside the div element.</p>
+
+    <p class="abs2">This is a absolutly positioned paragraph inside the div element at 40px top and 60px left.</p>
+  
+        </div> -->
+    <div>
+
+        <div class="one">One</div>
+        <div class="two">Two</div>
+        <div class="three">Three</div>
+        <div class="four">Four</div>
+    </div>
+
+</body>
+
+</html>

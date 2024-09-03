@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key validation</title>
+</head>
+<body>
+    <input type="text" id="one" placeholder="Enter Name">
+
+    <script>
+        textBox= document.getElementById("one");
+
+
+        textBox.addEventListener("input",function(){
+        //   this.value=  this.value.toUpperCase();
+          this.value= this.value.replace(/\d/g,"").toUpperCase();
+        })
+    </script>
+</body>
+</html>

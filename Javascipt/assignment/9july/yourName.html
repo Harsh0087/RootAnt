@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name</title>
+</head>
+<body>
+   <h1 id="yourName">Harshpreet Singh</h1>
+<button onclick="start()">start</button>
+
+   <script>
+    var i ,color;
+    i=0;
+    color=["white","black"];
+    function start()
+    {
+        x=setInterval(colorChange,1000);
+    }
+    function colorChange()
+    {
+        document.getElementById("yourName").style.color=color[i];
+        i++;
+        if(i==2)
+    {
+        i=0;
+    }
+    }
+   </script>
+
+</body>
+</html>

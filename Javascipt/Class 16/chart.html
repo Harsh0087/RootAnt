@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chart</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <canvas id="myChart" width="300px" height="70px"></canvas>
+</head>
+<body>
+    <script>
+        const label=["jan","feb","march","april","may","june"];
+        const data={
+            labels:label,
+            datasets:[{
+                data:[30,70,20,10,80,40],
+                backgroundColor:"red",
+                label:"my choice"
+            }]
+        }
+        const config = {
+                type: 'bar',
+                //   pie radar line 
+                data: data,
+                options: {
+                    scales: {
+                        x: {
+                            grid: {
+                                display: true,
+                            },
+                        },
+                        y: {
+                            grid: {
+                                display: true,
+                            },
+                        },
+                    },
+                },
+            };
+            var myChart = new Chart(
+                    document.getElementById('myChart'),
+                    config
+                );
+    </script>
+</body>
+</html>

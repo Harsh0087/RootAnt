@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="record"></div>
+    <script>
+        async function show() {
+
+            const uri = 'https://dummyjson.com/products';
+
+            const response = await fetch(uri);
+            const data = await response.json();
+console.log(data);
+
+           let x= data.products.filter(record=>(record.price==9.99))
+           console.log(x);
+            x.forEach((record, index) => {
+                document.write(`Record ${index+1}:-- `);
+                document.write(`ID: ${record.id}--- `);
+                document.write(`Title: ${record.title}--- `);
+                document.write(`Price: ${record.price}`);
+                // document.write('------------------------');
+                document.write("<br>");
+            })
+
+        }
+
+        window.onload = show();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form </title>
+</head>
+
+<body>
+    <h3>Admission Form</h3>
+    <label for="course">Course</label>
+    <select id="course" onchange="show()">
+        <option value="">Select your Course</option>
+    </select><br>
+    <label for="subject">Subject</label>
+    <select id="subject" onchange="result()">
+        <option value="">Select your subject</option>
+    </select>
+    <br>
+    <br>
+    <label for="duration">Duration</label>
+    <input type="text" placeholder="Duration of the course!" id="duration"><label
+        for="years">months</label><br>
+    <label for="fees">Fees</label>
+    <input type="text" name="fees" placeholder="Fees of the course!" id="fees"><label for="rupees">Rupees/year</label>
+    <script>
+        function loadCourse() {
+            coursetd = document.getElementById("course");
+            coursetd.innerHTML += "<option id ='one' value = 'bca1' > BCA</option > <option id='two' value='mca1'>MCA</option>"
+        }
+
+        function show() {
+            subjecttd = document.getElementById("subject");
+            if (document.getElementById("course").value == "bca1") {
+                subjecttd.innerHTML = "<option value='bcasub1'> Bca 1 Sub</option><option value='bcasub2'> Bca 2 Sub</option>";
+            } else if (document.getElementById("course").value == "mca1") {
+                subjecttd.innerHTML = "<option value='mcasub1'> Mca 1 Sub</option><option value='mcasub2'> Mca 2 Sub</option>";
+            }
+            else {
+                subjecttd.innerHTML = "Select your subject";
+            }
+        }
+        function result() {
+            subjecttd = document.getElementById("subject");
+            alert(subjecttd.value)  
+            if (subjecttd.value == "bcasub1") {
+                console.log("hi")
+                document.getElementById("duration").value="36";
+                document.getElementById("fees").value=25000;
+            }else if(subjecttd.value == "bcasub2"){
+
+                document.getElementById("duration").value=36;
+                document.getElementById("fees").value=50000;
+            } else if (subjecttd.value == "mcasub1") {
+
+                document.getElementById("duration").value = 24;
+                document.getElementById("fees").value = 30000;
+            }
+             else if (subjecttd.value == "mcasub2") {
+
+                document.getElementById("duration").value = 24;
+                document.getElementById("fees").value = 10000;
+            }
+        }
+        window.onload = loadCourse();
+    </script>
+</body>
+
+</html>

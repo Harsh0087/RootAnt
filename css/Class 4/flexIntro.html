@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex - Introduction</title>
+    <style>
+        .container{
+            display: flex;
+            height: 50vh;
+            width: 100%;
+            border: 2px solid black;
+            justify-content:space;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-end;
+
+        }
+        .box{
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box exists 1 <img itemprop="contentUrl" src="https://www.svgrepo.com/show/530576/calendar.svg" alt="Calendar SVG File" title="Calendar SVG File" width="50" height="50"></div>
+        <div class="box">box exists 2 <img itemprop="contentUrl" src="https://www.svgrepo.com/show/530579/set-up.svg" alt="Set Up SVG File" title="Set Up SVG File" width="50" height="50"></div>
+        <div class="box">box exists 3 <img itemprop="contentUrl" src="https://www.svgrepo.com/show/530583/network.svg" alt="Network SVG File" title="Network SVG File" width="50" height="50"></div>
+        <div class="box">box exists 4 <img itemprop="contentUrl" src="https://www.svgrepo.com/show/530586/bank.svg" alt="Bank SVG File" title="Bank SVG File" width="50" height="50"></div>
+    </div>
+</body>
+</html>

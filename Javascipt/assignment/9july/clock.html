@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+</head>
+
+<body>
+    <input type="text" disabled value="hours" id="hour">
+    <input type="text" disabled value="minutes" id="minute">
+    <input type="text" disabled value="seconds" id="second"><br><br>
+    <button onclick="start()"> Start </button>
+    <button onclick="stop()"> Stop </button>
+
+
+    <script>
+        var x;
+        function start() {
+            x = setInterval(start_clock, 1000);
+
+            function start_clock() {
+                var h;
+                h = new Date();
+
+                document.getElementById("hour").value = h.getHours();
+                document.getElementById("minute").value = h.getMinutes();
+                document.getElementById("second").value = h.getSeconds();
+            }
+        }
+        function stop() {
+            clearInterval(x);
+        }
+    </script>
+</body>
+
+</html>

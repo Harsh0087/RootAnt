@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country</title>
+</head>
+<body>
+    <div id="text11"></div>
+    <h3>countries and cities</h3>
+    <label for="country">Country:</label>
+    <select name="" id="country" onchange="loadState()">
+        <option value="">Select a country.</option>
+    </select><br>
+    <label for="state">State:</label>
+    <select name="" id="state">
+        <option value="">Select a state.</option>
+    </select><br>
+    <!-- <label for="state">State:</label>
+    <select name="" id="state">
+        <option value="">Select a state.</option>
+    </select><br> -->
+    <script>
+        var dataOfCountries;
+        async function country() {
+            const url= "https://countriesnow.space/api/v0.1/countries/states";
+            const response = await fetch(url);
+            dataOfCountries = await response.json();
+      const  text1 = document.getElementById("text11")
+
+            // console.log((dataOfCountries.data[0].states))
+            return dataOfCountries;
+        }
+        async function loadCountry(){
+            var countries = document.getElementById("country");
+            var details = await country()
+            details.data.forEach((record,index) => {
+                // console.log(record.states);
+                countries.innerHTML+= `<option id=${index} value="${record.name}" > ${record.name} </option>`;
+            });
+        }
+       async function loadState(){
+            var states = document.getElementById("state");
+            var stateDetails = await country();
+            var selectedCountry=document.getElementById("country");
+            let i;
+            console.log(dataOfCountries.data.length)
+           
+                for(i=0;i<dataOfCountries.data.length;i++){
+                    if(stateDetails.data[i].name == document.getElementById("country").value){
+                        console.log("ok")
+                        stateDetails.data[i].states.forEach(state=>{
+
+                            states.innerHTML += `<option id=${[i]} value="${state + [i]}" > ${state.name} </option>`;
+                        })
+                        
+                        break;
+                    }
+                
+            }
+    //         stateDetails.data.forEach((record,index)=>{
+
+
+    // states.innerHTML+= `<option id=${index} value="${record.states+index}" > ${record.states[index].name} </option>`;
+
+            
+        }
+        window.onload=loadCountry();
+    </script>
+</body>
+</html>

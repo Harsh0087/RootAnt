@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        .i{
+            display: flex;
+    padding: 30px;
+    height: 100px;
+    margin: 14px;
+    border: 1px solid red;
+            
+        }
+        img{
+            height: 80px;
+            width: 50px;
+            margin: 10px;
+            filter: grayscale();
+            border: 3px solid black;
+            border-radius: 30px;
+        }
+        img:hover{
+            filter: none;
+            height: 100px;
+            width: 100px;
+            border-radius: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="i">
+        <img src="1.webp" alt="1">
+        <img src="2.webp" alt="2">
+        <img src="3.webp" alt="3">
+        <img src="4.webp" alt="4">
+        <img src="5.webp" alt="5">
+    </div>
+</body>
+</html>

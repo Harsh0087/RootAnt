@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-shop</title>
+</head>
+<body>
+    <label for="productName">Name of the product:</label>
+    <input type="text" id="productName"> <br>
+    <label for="price">Price:</label>
+    <input type="text" id="price"><br>
+    <label for="quantity">Quantity:</label>
+    <input type="text" id="quantity">
+    <fieldset>
+        <legend>Billing</legend>
+        <label for="bill">Bill:</label>
+        <input disabled type="text" id="bill"><br>
+        <label for="disc">Discount:</label>
+        <input disabled type="text" id="disc"><br>
+        <label for="net">Net:</label>
+        <input disabled type="text" id="net">
+    </fieldset><br>
+    <button onclick="submit()">Submit</button>
+    <button onclick="reset()">Reset</button>
+
+
+
+    <script>
+        function submit(){
+            var d,sp;
+            //calculate the value of the items.
+            document.getElementById("bill").value=parseInt(price.value)*parseInt(quantity.value);
+
+            //this will calculate the discount.
+            d=10;
+            sp=parseInt(bill.value)*0.10;
+        if(parseInt(sp)<100){
+            document.getElementById("disc").value = (parseInt(bill.value))*0.10;
+           
+        }else{
+             document.getElementById("disc").value = parseInt(100);
+            
+        }
+        document.getElementById("net").value=parseInt(bill.value)-parseInt(disc.value);
+        }
+            function reset()
+            {
+                document.getElementById("productName").value="";
+                document.getElementById("price").value="";
+                document.getElementById("quantity").value="";
+                document.getElementById("disc").value="";
+                document.getElementById("bill").value="";
+                document.getElementById("net").value="";
+
+                document.getElementById("productName").focus();
+            }
+    </script>
+</body>
+</html>

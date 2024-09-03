@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/pdf-image@2.0.0/index.min.js
+    "></script>
+</head>
+
+<body>
+    <button onclick="show()">Submit</button>
+    <script>
+        function show() {
+            const { jsPDF } = window.jspdf
+            var doc = new jsPDF();
+            doc.setFont("helvica");
+            doc.setFontSize(70);
+            doc.setTextColor("green")
+            doc.text("hello", 10, 50);
+            doc.setLineWidth(50);
+            doc.setDrawColor("red");
+            doc.line(10, 10, 100, 10)
+
+            var img = new Image();
+            img.src = "1.svg"
+            doc.addImage(img, 10, 200, 50, 50);
+            doc.save("mypdf.pdf")
+        }
+    </script>
+</body>
+
+</html>

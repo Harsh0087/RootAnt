@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+</head>
+<body>
+    <div id="record"></div>
+    <script>
+        let x="";
+        let person={
+            id:7,
+            name:'Johan',
+            city:'jaipur',
+        }
+        for(let y in person){
+            x+=y+"     ";
+        }
+        x+="<br/>";
+        for(y in person)
+        {
+            x+=person[y]+" ";
+        }
+        document.getElementById("record").innerHTML=x;
+    </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joining form</title>
+    <style>
+        p::after {
+            content: "*";
+            color: red;
+        }
+
+        p::first-letter {
+            color: red;
+
+        }
+
+        .fn:focus {
+            background: red;
+            color: white;
+        }
+
+        .desig:focus {
+            width: 300px;
+        }
+
+        .fathern:focus {
+            width: 300px;
+            background: rgb(38, 0, 255);
+            color: white;
+        }
+
+        .submit:hover {
+            display: none;
+        }
+
+        #m:checked +label {
+            color: green;
+        }
+        #fm:checked + label{
+            color: pink;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            display: inline;
+            margin: 10px;
+        }
+
+        a:hover {
+            color: rgb(0, 255, 76);
+        }
+
+        a:link{ 
+        color: rgb(0, 0, 0);
+        }
+
+        a:visited {
+            color: yellow;
+        }
+
+        a:active {
+            color: rgb(0, 183, 255);
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <a target="_blank" href="http://google.com" visited="">
+            <li>Home</li>
+        </a>
+        <a target="_blank" href="http://facebook.com">
+            <li>Contact</li>
+        </a>
+        <a target="_blank" href="http://">
+            <li>About</li>
+        </a>
+    </ul>
+    <fieldset>
+        <legend>Joining Form</legend>
+        <form action="">
+            <h2>Joining Form</h2>
+            <label for="fullName" class="imp">
+                <p>Full Name:</p>
+            </label>
+            <input type="text" class="fn"><br>
+            <label for="designation">
+                <p>Designation:</p>
+            </label>
+            <input type="text" class="desig"><br>
+            <label for="father'sName">
+                <p>Father's Name:</p>
+            </label>
+            <input type="text" class="fathern"><br>
+            <label for="Dob">
+                <p>DOB:</p>
+            </label>
+            <input type="date" class="dob"><br>
+            <label for="permanentAddress">
+                <p>Permanent Address:</p>
+            </label>
+            <input type="text" class="pa"><br>
+            <label for="correspondenceAddress">
+                <p>Correspondence Address:</p>
+            </label>
+            <input type="text" class="ca"><br>
+            <label for="mobileNumber">
+                <p>Mobile Number:</p>
+            </label>
+            <input type="number" class="mn"><br>
+            <label for="aNumber">
+                <p>Alternative Mobile Number:</p>
+            </label>
+            <input type="number" class="amn"><br>
+
+            <label for="lNumber">
+                <p>Landline Number:</p>
+            </label>
+            <input type="number" class="ln"><br>
+            <label for="bloodgroup">
+                <p>Blood Group:</p>
+            </label>
+            <input type="text" class="bg"><br>
+            <label for="panCard">
+                <p>Pancard:</p>
+            </label>
+            <input type="text" class="pc"><br>
+            <label for="sbankName">
+                <p>Salary Bank Name:</p>
+            </label>
+            <input type="text" class="sbn"><br>
+            <label for="sbankAccNumber">
+                <p>Salary Bank Account Number:</p>
+            </label>
+            <input type="text" class="sban"><br>
+            <label for="ifsc">
+                <p>IFSC Code:</p>
+            </label>
+            <input type="text" class="ifsc"><br>
+            <label for="pn">
+                <p>Passport Number:</p>
+            </label>
+            <input type="text" class="pn"><br>
+            <input type="button" value="Submit" class="submit">
+            <input type="reset" value="Reset">
+            <label for="gender">
+                <p>Gender</p>
+            </label>
+            <input id="m" type="radio" name="gender">
+            <label for="#m" >Male</label>
+            <input id="fm" type="radio" name="gender">
+            <label for="#fm">Female</label>
+        </form>
+    </fieldset>
+</body>
+
+</html>

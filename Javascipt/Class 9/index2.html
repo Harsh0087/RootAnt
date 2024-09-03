@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>merg</title>
+</head>
+<body>
+    <div id="record"></div>
+
+
+    <script>
+        let x="";
+        let product1={
+            id:101,
+            productName:'shoes',
+            cost:2000,
+            year:2024,
+        }
+        let product2={
+            id:105,
+            productName:'shirt',
+            cost:2500,
+            year:2020,
+        }
+        let product_all=[product1,product2];
+        {
+            product_all.forEach(record =>{
+                console.log(record.id);
+                console.log(record.productName);
+                console.log(record.cost);
+                console.log(record.year);
+            })
+        }
+    </script>
+</body>
+</html>

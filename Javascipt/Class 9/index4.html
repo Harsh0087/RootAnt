@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jio cinema</title>
+</head>
+<body>
+    <script>
+        let prog1={
+            progId:101,
+            name:"Ramyan",
+            telecastTime:9+ "pm",
+            views:900,
+        }
+        let prog2={
+            progId:102,
+            name:"Shaktiman",
+            telecastTime:11+ "pm",
+            views:200,
+        }
+        let allProg= [prog1,prog2];
+        allProg.forEach(rec =>{
+            console.log(rec.progId)
+            console.log(rec.name)
+            console.log(rec.telecastTime)
+            console.log(rec.views)
+        })
+
+
+        if(prog2.views<prog1.views){
+            console.log("Program " + prog1.name +" is more popular.")
+        }else{
+            console.log("Program "+prog2.name+" is more popular.")
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image changer</title>
+</head>
+
+<body>
+    <img id="image11" src="1.jpg" alt="pic">
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <script>
+        var imag =["1.jpg","4.jpg","3.jpg"]
+        var x, i = 0;
+        function start(){
+
+            x = setInterval(changeImage,1000);
+        }
+        function changeImage(){
+
+            document.getElementById("image11").src=imag[i];
+            i++;
+            if(i==3){
+                i=0;
+            }
+        }
+        function stop(){
+            clearInterval(x);
+        }
+    </script>
+</body>
+
+</html>

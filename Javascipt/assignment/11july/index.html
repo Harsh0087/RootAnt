@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric meter</title>
+</head>
+<body>
+    <label for="name">Name:</label>
+    <input type="text" id="name" ><br>
+    <label for="lastUnit">Last Unit</label>
+    <input type="text" id="lastUnit"><br>
+    <label for="currentUnit">Current Unit</label>
+    <input type="text" id="currentUnit"><br>
+    <label for="totalUnit">Total Unit</label>
+    <input type="text" id="totalUnit"><br>
+    <label for="bill">Bill</label>
+    <input type="text" id="bill"><br>
+    <button onclick="submit()">Submit</button><button onclick="reset()">Reset</button>
+
+
+    <script>
+
+        function submit()
+        {
+            document.getElementById("totalUnit").value=parseInt(document.getElementById("currentUnit").value) + parseInt(document.getElementById("lastUnit").value);
+            var t= parseInt(document.getElementById("totalUnit").value);
+
+            if(t<200)
+        {
+            document.getElementById("bill").value=parseInt(0);
+        }
+        else if(t>200 && t<=500){
+            document.getElementById("bill").value = t*2.5;
+        }
+        else if(t>500 && t<=1000){
+            document.getElementById("bill").value = t*3.5;
+        }
+        else{
+            document.getElementById("bill").value = t * 4.5;
+
+        }
+        }
+    </script>
+</body>
+</html>

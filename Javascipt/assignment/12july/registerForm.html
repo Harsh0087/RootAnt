@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        #nmError{
+            color: red;
+        }
+        #emError{
+            color: red;
+        }
+        #passError{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+        <label for="nm">Name:</label>
+        <input type="text" id="nm" onblur="nmBlur()"><br>
+        <!-- error message -->
+         <div id="nmError"></div>
+
+
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" onblur="emailBlur()"><br>
+        <!-- error message -->
+        <div id="emError"></div>
+
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" onblur="passblur()"><br>
+        <!-- error message -->
+        <div id="passError"></div>
+
+
+        <label for="hobbies">Hobbies(any2)</label><br>
+        <span>Reading</span><input type="checkbox" name="hobbies" >
+        <span>Walking</span><input type="checkbox" name="hobbies"><br>
+        <span>Surfing</span><input type="checkbox" name="hobbies">
+        <span>Gym</span><input type="checkbox" name="hobbies"><br>
+
+        <input type="submit" value="Submit">
+      
+
+
+    
+
+
+
+    <script>
+
+       
+        function nmBlur(){
+             var a;
+            a = document.getElementById("nm");
+        a.value = a.value.toUpperCase();
+        if(a.value=="" && (a.value).length < 3){
+            document.getElementById("nmError").innerHTML="*Please enter valid name.";
+        }else{
+            document.getElementById("nmError").innerHTML = "";
+        }
+       
+        if(a.value==parseInt(a.value)){
+
+            document.getElementById("nmError").innerHTML = "*Please enter your alphabets only.";
+        } else {
+            document.getElementById("nmError").innerHTML = "";
+        }
+        
+        if((a.value).length<3)
+        {
+            document.getElementById("nmError").innerHTML = "*Please enter valid name.";
+        }
+        }
+
+        function emailBlur(){
+            if(email.value=="")
+        {
+            document.getElementById("emError").innerHTML = "*Please enter valid E-mail.";
+        }else{
+            document.getElementById("emError").innerHTML = "";
+    
+        }
+        }
+
+        function passblur()
+        {
+                if((pass.value).length<8){
+                    document.getElementById("passError").innerHTML = "*Password length is less then 8.";
+                }else{
+                    document.getElementById("passError").innerHTML = "";
+                }
+        }
+        
+    </script>
+</body>
+</html>

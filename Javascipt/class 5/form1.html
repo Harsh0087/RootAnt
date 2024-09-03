@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+
+<body>
+    <h1>SUM</h1>
+    <table style="border: 1px solid black">
+        <tr>
+            <td>
+
+                <label for="a">Enter a</label> <input type="text" id="a"><br>
+                <label for="b">Enter b</label> <input type="text" id="b"><br>
+                <label for="ans">Ans:-</label> <input disabled type="text" id="ans"><br>
+                <button onclick="show()">Submit</button> <button onclick="reset()">Reset</button>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <h1>Find Max</h1>
+    <table style="border: 1px solid black">
+        <tr>
+            <td>
+                <label for="firstNum">First number</label> <input type="text" id="firstNum"><br>
+                <label for="secondNum">Second number </label> <input type="text" id="secondNum"><br>
+                <label for="maxvalue">Max value is:-</label> <input type="text" disabled id="maxvalue"><br>
+                <button id="result1" onclick="findMax()">Result</button>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <h1>Report card</h1>
+    <table style="border: 1px solid black">
+        <tr>
+            <td>
+                <label for="name">Name</label> <input type="text" id="name"><br>
+                <label for="physics"> physics</label> <input type="text" id="physics"><br>
+                <label for="chemistry"> chemistry</label> <input type="text" id="chemistry"><br>
+                <label for="maths"> maths</label> <input type="text" id="maths"><br>
+                <label for="english"> english</label> <input type="text" id="english"><br>
+                <label for="total">Total marks:-</label> <input disabled type="text" id="total"><br>
+                <label for="percentage">Percentage</label>
+                <input disabled id="percentage" type="text"><br>
+                <label for="result">Result</label>
+                <input disabled id="result" type="text"><br>
+                <button onclick="totalMarks()">Submit</button> <button>Reset</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function show() {
+            document.getElementById("ans").value = (parseInt(a.value) + parseInt(b.value));
+
+        }
+        function reset() {
+            document.getElementById("a").value = "";
+            document.getElementById("b").value = "";
+            document.getElementById("ans").value = "";
+
+
+            document.getElementById("a").focus();
+        }
+        function findMax() {
+            var x, y, z;
+            x = firstNum;
+            y = secondNum;
+
+            if (parseInt(x.value) > parseInt(y.value)) {
+                document.getElementById("maxvalue").value = "first number is max.";
+            }
+            else {
+                document.getElementById("maxvalue").value = "second number is max.";
+
+            }
+        }
+        function totalMarks() {
+            var p,c,m,e,t, percent;
+            p=document.getElementById("physics").value;
+            c=document.getElementById("chemistry").value;
+            m=document.getElementById("maths").value;
+            e=document.getElementById("english").value;
+            t= parseInt(p) + parseInt(c) + parseInt(m) + parseInt(e) ;
+            document.getElementById("total").value=t;
+            percent = (t / 400) * 100;
+            document.getElementById("percentage").value=percent;
+            if(percent<33){
+                document.getElementById("result").value="fail";
+        }
+        else{
+            document.getElementById("result").value="pass";
+        }
+        }
+
+    </script>
+
+</body>
+
+</html>

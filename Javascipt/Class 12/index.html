@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let stud={
+            id:101,
+            name:"Harsh",
+            marks:[70,80,90],
+            show:function(){
+                var sum=0;
+                sum=this.marks[0]+this.marks[1]+this.marks[2];
+                return sum;
+            }
+        }
+        console.log(`${stud.id}`);
+        console.log(`${stud.name}`);
+        console.log(`${stud.marks.join("->")}`);
+        console.log(`${stud.show()}`)
+    </script>
+</body>
+</html>

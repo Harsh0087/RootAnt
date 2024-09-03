@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information Form</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            display: felx;
+            height: fit-content;
+            width: 400px;
+
+            background-color: #FFECD6;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: -3px 0px 44px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: -3px 0px 10px 5px rgba(0, 0, 0, 0.75);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+
+            color: #FFECD6;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="reset"] {
+            background-color: #465769;
+            color: #FFECD6;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Popup styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: #3559E0;
+            padding: 20px;
+            border-radius: 10px;
+            color: #FFECD6;
+            box-shadow: -3px 0px 10px 5px rgba(0, 0, 0, 0.75);
+            width: 480px;
+
+        }
+
+        .close-btn {
+            position: relative;
+            top: -245px;
+            right: -500px;
+            cursor: pointer;
+            height: 25px;
+            color: #FFECD6;
+        }
+
+        .showdetails {
+            position: absolute;
+            display: none;
+            /* display: flex; */
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            box-shadow: -3px 0px 10px 5px rgba(0, 0, 0, 0.75);
+            padding-top: 10px;
+            border-radius: 50px;
+            height: inherit;
+            width: 300px;
+            background-color: #FFECD6;
+        }
+
+        label[for="fatherName"],
+        label[for="motherName"],
+        label[for="address"] {
+            color: #FFECD6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container" id="mainForm">
+        <h1>Personal Information</h1>
+
+
+        <label for="fullName">Full Name:</label>
+        <img onclick="show()" src="plus.svg" alt="Family Details" id="familyDetailsBtn"
+            style="cursor: pointer; width: 20px; height: 20px; margin-left: 5px;">
+
+        <input type="text" id="fullName">
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob">
+        <label for="address">Address:</label>
+        <textarea id="address" rows="4"></textarea>
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br /><br />
+        <label for="country">Country:</label>
+        <select id="country">
+            <option value="">Select Country</option>
+            <option value="USA">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Canada">Canada</option>
+        </select>
+
+        <label>Interests:</label>
+        <input name="interests" type="checkbox" id="sports" value="sports">
+        <label for="sports">Sports</label>
+        <input name="interests" type="checkbox" id="music" value="music">
+        <label for="music">Music</label>
+        <br /><br />
+        <input type="submit" value="Submit" onclick="submit1()">
+
+    </div>
+    <!-- Popup for family details -->
+    <div class="popup-overlay" id="popupOverlay">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <div class="popup-content">
+            <h2>Enter Family Details</h2>
+            <label for="fatherName">Father Name:</label>
+            <input type="text" id="father" required>
+            <label for="motherName">Mother Name:</label>
+            <input type="text" id="mother" required>
+            <label for="address">Address</label>
+            <textarea name="address" id="pAddress" cols="30" rows="10"></textarea>
+            <input type="reset" value="Reset">
+            <input type="button" value="Submit" onclick="details()">
+        </div>
+
+    </div>
+    <!-- Show details -->
+    <div class="showdetails" id="showdetails1">
+        <h3>Personal deatils are submitted.</h3>
+        <label for="Name">Name:</label>
+        <p id="showNm"></p>
+        <label for="email">Email:</label>
+        <p id="showemail"></p>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <p id="showPhone"></p>
+
+        <label for="dob">Date of Birth:</label>
+        <p id="showDob"></p>
+
+        <label for="address1">Address:</label>
+        <p id="showAddress"></p>
+
+        <label>Gender:</label>
+        <p id="showGender"></p>
+
+        <label for="country">Country:</label>
+        <p id="showCountry"></p>
+        <label>Interests:</label>
+        <p id="showInterest"></p>
+        <h4>Family details.</h4>
+        <label for="fatherName1">Father Name:</label>
+        <p id="showFn"></p>
+        <label for="motherName1">Mother Name:</label>
+        <p id="showMn"></p>
+        <label for="address1">Address:</label>
+        <p id="showPA"></p>
+
+
+    </div>
+    <script>
+        var fatherName = document.getElementById("father");
+        var motherName = document.getElementById("mother");
+        var parentAddress = document.getElementById("pAddress");
+        var fullName = document.getElementById("fullName");
+        var email = document.getElementById("email");
+        var phoneNumber1 = document.getElementById("phoneNumber");
+        var dob1 = document.getElementById("dob");
+        var address1 = document.getElementById("address");
+        var gender = document.getElementsByName("gender");
+        var country = document.getElementById("country");
+        var interest = document.getElementsByName('interests');
+
+
+
+        var popup = document.getElementById("popupOverlay");
+        var mainForm1 = document.getElementById("mainForm");
+        var showdeatils1 = document.getElementById("showdetails1");
+        let i;
+
+        const show = () => {
+            popup.style.display = "flex";
+        }
+        closePopup = () => {
+            popup.style.display = "none";
+        }
+        details = () => {
+            document.getElementById("showFn").innerHTML = fatherName.value;
+            document.getElementById("showMn").innerHTML = motherName.value;
+            document.getElementById("showPA").innerHTML = parentAddress.value;
+            popup.style.display = "none";
+
+        }
+        submit1 = () => {
+            mainForm1.style.display = "none";
+            showdeatils1.style.display = "flex";
+            document.getElementById("showNm").innerHTML = fullName.value;
+            document.getElementById("showemail").innerHTML = email.value;
+            document.getElementById("showPhone").innerHTML = phoneNumber1.value;
+            document.getElementById("showDob").innerHTML = dob1.value;
+            document.getElementById("showAddress").innerHTML = address1.value;
+            document.getElementById("showGender").innerHTML = gender.value;
+            document.getElementById("showCountry").innerHTML = country.value;
+
+
+            const selectedIntrest = [];
+            const selectedgender = [];
+
+
+            // this will show the selected interest.
+            for (i = 0; i < interest.length; i++) {
+                if (interest[i].checked) {
+                    selectedIntrest.push(interest[i].value);
+
+                }
+                document.getElementById("showInterest").innerHTML = selectedIntrest;
+
+
+
+                // this will show the selected gender
+                for (i = 0; i < gender.length; i++) {
+                    if (gender[i].checked) {
+                        selectedgender.push(gender[i].value);
+
+                    }
+                    document.getElementById("showGender").innerHTML = selectedgender;
+                }
+
+                //this will show the selected country
+                document.getElementById("showCountry").innerHTML = country.value;
+            }
+        }
+    </script>
+</body>
+
+</html>

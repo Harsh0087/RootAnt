@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Captcha</title>
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        .container{
+            display: flex;
+            /* justify-content: center; */
+            align-items:center;
+            /* border: 1px solid black; */
+            height: 200px;
+            width: 600px;
+            margin: 10px;
+            padding: 10px;
+        }
+        .container input{
+            height: 30px;
+            box-shadow: 10px 10px 10px 1px ;
+            margin-right: 30px;
+        }
+        button{
+            margin-left: 40px;
+            background-color: blue;
+            color: red;
+
+        }
+        #mixWords{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+            box-shadow: 1px 1px 10px 1px red;
+
+        }
+        .reload{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="input">
+
+            <input type="text" id="textbox">
+        </div>
+        <div id="reloadIcon">
+    <span onclick="reloadCaptcha()" class="reload material-symbols-outlined">
+        refresh
+    </span>
+</div>
+<div id="mixWords">
+    <!-- <label for="words"></label> -->
+</div>
+<div id="btn">
+    <button onclick="submit()">Submit</button>
+</div>
+    </div>
+    <div id="result"></div>
+    <script>
+        function newCaptcha(){
+            const list="QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890";
+            var code="";
+            for(x=1;x<=4;x++){
+                code+=list.charAt(Math.random()*list.length);
+            }
+            document.getElementById("mixWords").innerHTML=code;
+            return code;
+        }
+        newCaptcha();
+        function reloadCaptcha(){
+            newCaptcha().reload();
+        }
+        function submit(){
+
+            var match=document.getElementById("textbox");
+            if(match.value==document.getElementById("mixWords").innerHTML){
+                document.getElementById("result").innerHTML="Captcha Matched";
+            }else{
+                 document.getElementById("result").innerHTML="Not Matched";
+                 reloadCaptcha();
+
+            }
+        }
+    </script>
+</body>
+</html>

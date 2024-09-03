@@ -1,0 +1,486 @@
+body {
+    height: 90vh;
+    width: 100vw;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dbeafe;
+}
+
+/* index page css */
+.containerIndex{
+    height: 10%;
+    width: 100%;
+}
+nav{
+    display: flex;
+    position: fixed;
+    top: 0px;
+    height: 10%;
+    width: 100%;
+    border: 1px solid #dbeafe;
+}
+.logo{
+    height: 72px;
+    width: 90px;
+    border: 1px solid #dbeafe;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.logoSvg{
+    height: 40px;
+}
+.navbar {
+    display: flex;
+    height: 100%;
+}
+.navbar .navContent{
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid black;
+
+}
+.navContent ul {
+    display: flex;
+justify-content: flex-start;
+}
+.svgnav{
+    height: 60px;
+}
+.navContent a{
+color: #334155;
+}
+.navContent li{
+    list-style: none;
+}
+
+
+/* login page css */
+.head {
+    transform: translate(0px, 20px);
+    height: 33px;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.loginBox {
+    transform: translate(0px, 35px);
+    height: 410px;
+    width: 320px;
+    color: #475569;
+    padding-left: 25px;
+    padding-right: 25px;
+    /* padding-top: px; */
+    font-family: "poppins", "sans-serif";
+    /* border: 1px solid black; */
+    border-radius: 6px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginBox h3 {
+    font-size: 19px;
+    font-weight: 600;
+
+}
+
+.em {
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    bottom: 10px;
+}
+
+#em,
+#pass {
+    height: 37px;
+    width: 320px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 0.1px solid rgb(207, 204, 204);
+    transition-property: border;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1s;
+    outline: none;
+}
+
+#em:focus,
+#pass:focus {
+    border: 1px solid #2563eb;
+    border-radius: 5px;
+}
+
+.pass {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+#em::placeholder,
+#pass::placeholder {
+    color: #9b9c9e;
+    font-family: "poppins", "sans-serif";
+    font-size: 15px;
+    /* padding-left: 15px; */
+
+
+}
+
+
+.forgotLink {
+    position: absolute;
+    font-size: 12px;
+    font-weight: 600;
+    transform: translate(280px, 145px);
+    text-decoration: none;
+}
+
+.forgotLink:hover,
+.register a {
+    color: #2563eb;
+}
+
+.accountLogin {
+    height: 35px;
+    width: 325px;
+    border-radius: 6px;
+    margin-top: 20px;
+    border: none;
+    color: white;
+    background-color: #2563eb;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+.loginBox a button{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.accountLogin:hover {
+    background-color: #1f57cf;
+}
+
+.extralogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(0px, 30px);
+    /* border-top: 1px solid rgb(207, 204, 204); */
+    /* width: 35px; */
+}
+
+.line1 {
+    position: absolute;
+    width: 370px;
+    border-top: 1px solid rgb(207, 204, 204);
+}
+
+.gfb {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.extralogin h4 {
+    font-size: 12px;
+    position: relative;
+    top: 7px;
+    font-weight: 700;
+    color: #9b9c9e;
+}
+
+.fbLogin,
+.googleLogin {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: none;
+    border-radius: 5px;
+    height: 39px;
+    width: 150px;
+    font-weight: 500;
+    background-color: #e2e8f0;
+}
+
+.fbLogin svg,
+.googleLogin svg {
+    position: relative;
+    left: 10px;
+}
+
+.fbLogin:hover,
+.googleLogin:hover {
+    background-color: #dbeafe;
+    color: #2563eb;
+    cursor: pointer;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    font-family: "poppins", "sans-serif";
+    font-size: 14px;
+    margin-top: 10px;
+    color: #475569;
+    transform: translate(0px, 35px);
+}
+
+.register a {
+    text-decoration: none;
+}
+
+.chatAi {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    border: 2px solid white;
+    position: fixed;
+    right: 10px;
+    bottom: 36px;
+    cursor: pointer;
+
+}
+
+.chatbox {
+    position: fixed;
+    right: 24px;
+    bottom: 53px;
+    height: 30px;
+
+}
+
+.unreadMessage {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 800;
+    right: 15px;
+    bottom: 70px;
+    height: 20px;
+    width: 20px;
+    font-size: 15px;
+    background-color: #2563eb;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+
+
+/* forgot password page css starts form here */
+
+
+
+.recoveryPassBox {
+    transform: translate(0px, 35px);
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 320px;
+    color: #475569;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: "poppins", "sans-serif";
+    border-radius: 6px;
+    background-color: white;
+}
+
+.resetPass {
+    height: 35px;
+    width: 325px;
+    border-radius: 6px;
+    margin-top: 20px;
+    border: none;
+    color: white;
+    background-color: #2563eb;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.resetPass a {
+    text-decoration: none;
+    color: white;
+}
+
+.resetPass:hover {
+    background-color: #1f57cf;
+}
+
+.loginAgain {
+    display: flex;
+    font-family: "poppins", "sans-serif";
+    font-size: 14px;
+    margin-top: 10px;
+    color: #475569;
+    transform: translate(0px, 35px);
+}
+
+.loginAgain a {
+    text-decoration: none;
+}
+
+
+/* register page css starts from here */
+
+
+.createAccBox{
+    transform: translate(0px, 35px);
+        height: 440px;
+        width: 450px;
+        color: #475569;
+        padding-left: 25px;
+        padding-right: 25px;
+        /* padding-top: px; */
+        font-family: "poppins", "sans-serif";
+        /* border: 1px solid black; */
+        border-radius: 6px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+}
+.details1{
+    display: flex;
+}
+#passRegisterRepeat,.passRepeate{
+    position: relative;
+    left: 15px;
+}
+#emRegister{
+    height: 37px;
+        width: 220px;
+        padding-left: 15px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 0.1px solid rgb(207, 204, 204);
+        transition-property: border;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 0.1s;
+        outline: none;
+        margin-top: 10px;
+}
+#passRegisterRepeat{
+height: 37px;
+    width: 220px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 0.1px solid rgb(207, 204, 204);
+    transition-property: border;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1s;
+    outline: none;
+    margin-top: 10px;
+}
+#yn,#passRegister{
+    height: 37px;
+    width: 190px;
+        padding-left: 15px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 0.1px solid rgb(207, 204, 204);
+        transition-property: border;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 0.1s;
+        outline: none;
+        margin-top: 10px;
+}
+#emRegister:focus,
+#yn:focus,
+#passRegisterRepeat:focus,
+#passRegister:focus{
+    border: 1px solid #2563eb;
+        border-radius: 5px;
+}
+#emRegister::placeholder,
+#yn::placeholder,
+#passRegisterRepeat::placeholder,
+#passRegister::placeholder{
+    color: #9b9c9e;
+        font-family: "poppins", "sans-serif";
+        font-size: 15px;
+}
+.yn{
+    font-size: 15px;
+        font-weight: 500;
+        /* position: relative;
+        bottom: 10px; */
+}
+.emRegister{
+    font-size: 15px;
+        font-weight: 500;
+}
+.details2{
+    display: flex;
+    margin-top: 15px;
+    height: 50px;
+}
+/* .d21 label,.d22 label{
+    margin-bottom: 100px;
+} */
+.passRepeate{
+font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.tAc{
+    transform: translate(0px,40px);
+   
+}
+.tAc a{
+   text-decoration: none;
+   color: #2563eb;
+   
+}
+#tAc:active{
+border-color: #2563eb;
+border-radius: 5px ;
+background-color: #2563eb;
+}
+.accountRegister{
+    transform: translate(0px, 30px);
+    height: 35px;
+        width: 450px;
+        border-radius: 6px;
+        margin-top: 20px;
+        border: none;
+        color: white;
+        background-color: #2563eb;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+}
+.extralogin2{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translate(0px, 50px);
+}
+.extralogin2 h4 {
+    font-size: 12px;
+    position: relative;
+    top: 7px;
+    font-weight: 700;
+    color: #9b9c9e;
+}
+.line2{
+    position: absolute;
+        width: 500px;
+        border-top: 1px solid rgb(207, 204, 204);
+}

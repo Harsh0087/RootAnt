@@ -1,0 +1,414 @@
+body {
+    background-color: #d7d6d4;
+    font-size: 14px;
+}
+
+header {
+    display: flex;
+    height: 100px;
+    position: relative;
+    top: 35px;
+    right: 110px;
+    width: 100vw;
+    /* border: 1px solid black; */
+}
+
+
+.logo {
+    font-family: warnock-pro-display;
+    position: relative;
+    font-size: 30px;
+    left: 160px;
+    line-height: 1;
+    top: 4px;
+    margin: 10px 0px 0px 28px;
+    padding: 12px;
+    border-top: 1px solid black;
+
+}
+
+.l1 {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    font-family: 'Roboto mono';
+    display: flex;
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    padding-right: 90px;
+    border-top: 1px solid black;
+}
+
+li {
+    font-family: roboto mono;
+    letter-spacing: 2px;
+    margin: 5px;
+    padding: 10px 15px 20px 20px;
+    list-style: none;
+    font-size: 13px;
+    cursor: pointer;
+    line-height: 2;
+}
+
+li:hover {
+    color: black;
+}
+
+#s1 {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: none;
+    position: relative;
+    bottom: 6px;
+    height: 32px;
+    width: 200px;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: #d7d6d4;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+#s1:hover{
+    border-bottom: 1px solid blue;
+}
+#s1:checked{
+    border-bottom: 1px solid blue;
+}
+.s1 {
+    position: relative;
+    top: 20px;
+}
+
+.ls {
+    display: flex;
+    position: relative;
+    left: 265px;
+}
+
+.sbt {
+    background: black;
+    color: white;
+    position: relative;
+    right: 4px;
+    bottom: 6px;
+    height: 36px;
+    border: 1px solid black;
+    width: 93px;
+    cursor: pointer;
+}
+
+.article {
+    font-family: 'roboto mono';
+    /* border: 1px solid black; */
+    height: 317px;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 100px;
+    top: 200px;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.txt {
+    font-weight: 600;
+    font-size: 13px;
+    position: relative;
+    left: 28px;
+    letter-spacing: 2px;
+}
+
+.img {
+    /* border: 1px solid black; */
+    margin: 10px;
+}
+
+.photo {
+    display: flex;
+    /* border: 1px solid black; */
+    height: 68px;
+    width: 260px;
+    margin: 14px 20px -5px 10px;
+    background-color: hsla(0, 0%, 100%, 0.2);
+    box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.05);
+}
+
+.photo:hover {
+    background-color: #fff;
+
+}
+
+.a1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 55px;
+    left: 70px;
+}
+
+.interior {
+    display: flex;
+    /* border: 1px solid black; */
+    height: 68px;
+    width: 260px;
+    margin: 14px 20px -5px 10px;
+    background-color: hsla(0, 0%, 100%, 0.2);
+    box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.05);
+}
+
+.interior:hover {
+    background-color: #fff;
+
+}
+
+.exterior {
+    display: flex;
+    /* border: 1px solid black; */
+    height: 68px;
+    width: 260px;
+    margin: 14px 20px -5px 10px;
+    background-color: hsla(0, 0%, 100%, 0.2);
+    box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.05);
+}
+
+.exterior:hover {
+    background-color: #fff;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.articleTitle {
+    color: black;
+    letter-spacing: 3px;
+    font-weight: 300;
+    line-height: 1;
+    font-size: 16px;
+    ;
+}
+
+.articleDate {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 11px;
+}
+
+.books {
+    font-family: 'roboto mono';
+    /* border: 1px solid black; */
+    height: 317px;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 98px;
+    top: 520px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.txt2 {
+    font-weight: 600;
+    /* border: 1px solid black; */
+    position: relative;
+    left: 25px;
+}
+
+.arrowIcone {
+    position: relative;
+    left: 170px;
+    bottom: -4px;
+}
+
+.bookTitle {
+    color: black;
+    letter-spacing: 3px;
+    font-weight: 600;
+    line-height: 1;
+    position: relative;
+    bottom: 45px;
+    font-size: 14px;
+}
+
+.author {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 11px;
+    position: relative;
+    bottom: 36px;
+}
+
+.bb {
+    display: flex;
+    /* border: 1px solid black; */
+    height: 68px;
+    width: 260px;
+    margin: 14px 20px -5px 10px;
+}
+
+.ma {
+    display: flex;
+    /* border: 1px solid black; */
+    height: 68px;
+    width: 260px;
+    margin: 35px 20px -5px 10px;
+}
+
+.archit {
+    display: flex;
+    /* border: 1px solid black; */
+    height: 68px;
+    width: 260px;
+    margin: 35px 20px -5px 10px;
+}
+
+.social {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: 50px;
+    height: 356px;
+
+    top: 245px;
+    left: 70px;
+}
+.social a{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 17px 0px 26px 0px;
+    /* border: 1px dashed red; */
+}
+
+.socialText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Mono', sans-serif;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+.more{
+    display: flex;
+    justify-content: center;
+    width: -6px;
+}
+.more2{
+    display: flex;
+    position: relative;
+    left: 217px;
+    bottom: 125px;
+    width: 150px;
+}
+.one 
+{
+    font-family:'roboto mono';
+    position: relative;
+    bottom: 240px;
+    right: 340px;
+    font-weight: 600;
+}
+.moreAbout{
+    font-family: 'roboto mono';
+    position: relative;
+    right: 170px;
+    bottom: 240px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.heading1{
+    font-family: warnock-pro-display;
+    font-size: 90px;
+    position: absolute;
+    top: 165px;
+    left: 386px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+.heading2{
+    font-family: warnock-pro-display;
+    font-size: 45px;
+    font-weight: 500;
+    position: relative;
+    left: 40px;
+    line-height: 43px;
+}
+.paragraph{
+    position: absolute;
+    left: 288px;
+    top: 105px;
+    /* border: 1px solid black; */
+    height: 158px;
+    margin: 28px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'roboto';
+    line-height: 1.57;
+    width: 384px;
+}
+.seeFullBtn{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    height: 40px;
+    width: 197px;
+    position: relative;
+    top: 22px;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 2px;
+
+}
+.design{
+    position: absolute;
+    bottom: -175px;
+    font-family: 'roboto mono';
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-weight: 600;
+}
+.watch{
+    position: absolute;
+    bottom: -175px;
+    left: 573px;
+    width: 150px;
+    font-family: 'roboto mono';
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-weight: 600;
+}
+.line{
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: -156px;
+    left: 507px;
+    font-family: 'roboto mono';
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-weight: 600;
+    width: 50px;
+}
+.two{
+    position: absolute;
+    bottom: -175px;
+    left: -130px;
+    font-family: 'roboto mono';
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    font-weight: 600; 
+}

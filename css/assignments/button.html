@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        strong {
+            border: 2px solid black;
+
+        }
+
+        input {
+            position: relative;
+            top: 10px
+        }
+
+        .line {
+            border: 1px solid black;
+            position: relative;
+            height: 0.1px;
+            width: .1px;
+            /* display: none; */
+            position: relative;
+            top: 30px;
+        }
+
+        .button {
+            border: 2px solid black;
+            height: 50px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .button:hover {
+            .line {
+                width: 100px;
+            }
+
+        }
+
+        .button:hover + p:hover{
+            .p1::before {
+                content: "::";
+            }
+
+            .p2 {
+                content: "pseudo-element";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <strong>
+            <p class="p1">:</p>
+            <p class="p2">pseudo-class</p>
+        </strong>
+        <div class="button">
+            <div class="line"></div>
+            <input class="b1" type="button" value="Button">
+            <div class="line"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

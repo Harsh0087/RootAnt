@@ -1,0 +1,22 @@
+.Arts{
+color:green;
+}
+.Science{
+color:red;
+}
+.Commerce{
+color: brown;
+}
+.num {
+    list-style-type: decimal;
+    /* This will show numbers */
+    margin-left: 20px;
+    /* Optional: Adds some indentation to the list */
+    color: blue;
+    /* Optional: Change the color of the list items */
+}
+
+    
+.td{
+    width: 200px;
+}
